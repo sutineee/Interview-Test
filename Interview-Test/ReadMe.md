@@ -1,5 +1,5 @@
 # Question
-- Implement method `GetUserById` in [UserRepository](#question) file to return the model similar to the `ExpectResult1.json` and `ExpectResult2.json`
+- Implement method `GetUserById` in [UserRepository](#question) file by using `Linq` to return the model similar to the `ExpectResult1.json` and `ExpectResult2.json`
 as following:
 
 
