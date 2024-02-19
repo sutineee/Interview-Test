@@ -7,10 +7,22 @@ namespace Interview_Test.Controllers;
 [Route("api/[controller]")]
 public class UserController : ControllerBase
 {
+    private readonly IUserRepository _userRepository;
+    
+    public UserController(IUserRepository userRepository)
+    {
+        _userRepository = userRepository;
+    }
+
     [HttpGet("GetUserById/{id}")]
     public ActionResult GetUserById(string id)
     {
-        //Todo: Implement this method
-        return Ok(Data.Users);
+        var data = _userRepository.GetUserById(id);
+        if (data == null)
+        {
+            return NotFound();
+        }
+        
+        return Ok(data); 
     }
 }
