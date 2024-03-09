@@ -1,0 +1,6 @@
+@Interview_Test.GatewayApi_HostAddress = http://localhost:5195
+
+GET {{Interview_Test.GatewayApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
