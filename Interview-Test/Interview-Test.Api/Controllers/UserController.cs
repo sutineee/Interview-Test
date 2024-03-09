@@ -1,4 +1,5 @@
-﻿using Interview_Test.Repositories;
+﻿using Interview_Test.Models;
+using Interview_Test.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Interview_Test.Controllers;
@@ -12,5 +13,12 @@ public class UserController : ControllerBase
     {
         //Todo: Implement this method
         return Ok(Data.Users);
+    }
+    
+    [HttpPost("CreateUser")]
+    public ActionResult GetUserById(UserModel user)
+    {
+        //Todo: Implement this method
+        return Ok();
     }
 }

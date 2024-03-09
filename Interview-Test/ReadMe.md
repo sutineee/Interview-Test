@@ -1,12 +1,31 @@
 # Question
-- Implement method `GetUserById` in [UserRepository](#question) file by using `Linq` to return the model similar to the `ExpectResult1.json` and `ExpectResult2.json`
+- Implement method `InvokeAsync` in [AuthenMiddleware.cs](#question) file to validate the `decrypted x-api-key` 
+from request header. So your must be decrypted the `x-api-key` from request header before you compare to the `original x-api-key` 
+and return `401 Unauthorized` if the `x-api-key` is invalid.
+
+**Important Note:** Please use `SHA512` algorithm to decrypt the `x-api-key` from request header.
+
+- Implement design database schema by using `Code-First and automated migration` approach in [InterviewTestDbContext.cs](#question) file to your database for the following requirement:
+  - User can have multiple roles.
+  - Role can have multiple permissions.
+  - User can have multiple permissions.
+  - User can have multiple roles and permissions.
+
+**Important Note:** Please use `SQL Server` for your database schema design.
+
+- Implement method `CreateUser` in [UserRepository.cs](#question) file and return affected row when execute `SaveChanges()` 
+to create a new user by using `Entity Framework` and to create the user please use the data from `Data.cs` file.
+
+
+- Implement method `GetUserById` in [UserRepository.cs](#question) file by using `Linq` to return the model similar to the `ExpectResult1.json` and `ExpectResult2.json`
 as following:
 
 
   `ExpectResult1.json`
 ```json
 {
-  "id": "user01",
+  "id": "02CE43A4-A378-4B30-B52E-227EFA6B696E",
+  "userId": "user01",
   "username": "John.D.Smith",
   "firstName": "John",
   "lastName": "Smith",
@@ -42,7 +61,8 @@ as following:
 `ExpectResult2.json`
 ```json
 {
-  "id": "user02",
+  "id": "F90810B6-E017-431A-9DAE-A4BA7F9BC865",
+  "userId": "user02",
   "username": "Bob.M.Jackson",
   "firstName": "Bob",
   "lastName": "Jackson",
@@ -67,6 +87,18 @@ as following:
 ```csharp
 [HttpGet("GetUserById/{id}")]
 public ActionResult GetUserById(string id)
+{
+    //Todo: Implement this method
+    return Ok();
+}
+```
+
+- Implement API by using `dependency injection` for interface `IUserRepositoy` file to create user from `Data.cs` file as following:
+  - `Post /api/user/CreateUser` in `UserController` file. as below:
+
+```csharp
+[HttpPost("CreateUser")]
+public ActionResult GetUserById(UserModel user)
 {
     //Todo: Implement this method
     return Ok();

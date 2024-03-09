@@ -8,7 +8,8 @@ public static class Data
     [
         new UserModel
         {
-            Id = "user02",
+            Id = Guid.Parse("F90810B6-E017-431A-9DAE-A4BA7F9BC865"),
+            UserId = "user02",
             Username = "Bob.M.Jackson",
             UserProfile = new UserProfileModel
             {
@@ -20,16 +21,15 @@ public static class Data
             {
                 new()
                 {
-                    UserId = "user02",
-                    RoleId = 3,
                     User = new UserModel
                     {
-                        Id = "user01",
-                        Username = "John.D.Smith",
+                        Id = Guid.Parse("F90810B6-E017-431A-9DAE-A4BA7F9BC865"),
+                        UserId = "user02",
+                        Username = "Bob.M.Jackson",
                         UserProfile = new UserProfileModel
                         {
-                            FirstName = "John",
-                            LastName = "Smith",
+                            FirstName = "Bob",
+                            LastName = "Jackson",
                             Age = 28
                         }
                     },
@@ -49,7 +49,8 @@ public static class Data
         },
         new UserModel
         {
-            Id = "user01",
+            Id = Guid.Parse("02CE43A4-A378-4B30-B52E-227EFA6B696E"),
+            UserId = "user01",
             Username = "John.D.Smith",
             UserProfile = new UserProfileModel
             {
@@ -61,11 +62,10 @@ public static class Data
             {
                 new()
                 {
-                    UserId = "user01",
-                    RoleId = 1,
                     User = new UserModel
                     {
-                        Id = "user01",
+                        Id = Guid.Parse("02CE43A4-A378-4B30-B52E-227EFA6B696E"),
+                        UserId = "user01",
                         Username = "John.D.Smith",
                         UserProfile = new UserProfileModel
                         {
@@ -90,11 +90,10 @@ public static class Data
                 },
                 new()
                 {
-                    UserId = "user01",
-                    RoleId = 2,
                     User = new UserModel
                     {
-                        Id = "user01",
+                        Id = Guid.Parse("02CE43A4-A378-4B30-B52E-227EFA6B696E"),
+                        UserId = "user01",
                         Username = "John.D.Smith",
                         UserProfile = new UserProfileModel
                         {
@@ -120,11 +119,10 @@ public static class Data
                 },
                 new()
                 {
-                    UserId = "user01",
-                    RoleId = 3,
                     User = new UserModel
                     {
-                        Id = "user01",
+                        Id = Guid.Parse("02CE43A4-A378-4B30-B52E-227EFA6B696E"),
+                        UserId = "user01",
                         Username = "John.D.Smith",
                         UserProfile = new UserProfileModel
                         {

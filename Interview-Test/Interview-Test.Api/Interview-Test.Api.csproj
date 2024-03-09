@@ -20,4 +20,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Interview-Test.Infrastructure\Interview-Test.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
