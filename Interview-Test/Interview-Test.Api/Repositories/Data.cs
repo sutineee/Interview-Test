@@ -37,12 +37,21 @@ public static class Data
                     {
                         RoleId = 3,
                         RoleName = "document operation",
-                        Permissions =
-                        [
-                            "3-01-printing-label",
-                            "2-04-packing-report",
-                            "1-04-picking-report"
-                        ]
+                        Permissions = new List<PermissionModel>
+                        {
+                            new()
+                            {
+                                Permission = "3-01-printing-label"
+                            },
+                            new()
+                            {
+                                Permission = "2-04-packing-report"
+                            },
+                            new()
+                            {
+                                Permission = "1-04-picking-report"
+                            }
+                        }
                     }
                 }
             }
@@ -78,14 +87,29 @@ public static class Data
                     {
                         RoleId = 1,
                         RoleName = "pick operation",
-                        Permissions =
-                        [
-                            "3-01-printing-label",
-                            "1-04-picking-report",
-                            "1-01-picking-info",
-                            "1-03-picking-confirm",
-                            "1-02-picking-start"
-                        ]
+                        Permissions = new List<PermissionModel>
+                        {
+                            new()
+                            {
+                                Permission = "3-01-printing-label"
+                            },
+                            new()
+                            {
+                                Permission = "1-04-picking-report"
+                            },
+                            new()
+                            {
+                                Permission = "1-01-picking-info"
+                            },
+                            new()
+                            {
+                                Permission = "1-03-picking-confirm"
+                            },
+                            new()
+                            {
+                                Permission = "1-02-picking-start"
+                            }
+                        }
                     }
                 },
                 new()
@@ -106,15 +130,33 @@ public static class Data
                     {
                         RoleId = 2,
                         RoleName = "pack operation",
-                        Permissions =
-                        [
-                            "2-03-packing-confirm",
-                            "2-04-packing-report",
-                            "1-04-picking-report",
-                            "2-02-packing-start",
-                            "3-01-printing-label",
-                            "2-01-packing-info"
-                        ]
+                        Permissions = new List<PermissionModel>
+                        {
+                            new()
+                            {
+                                Permission = "2-03-packing-confirm"
+                            },
+                            new()
+                            {
+                                Permission = "2-04-packing-report"
+                            },
+                            new()
+                            {
+                                Permission = "1-04-picking-report"
+                            },
+                            new()
+                            {
+                                Permission = "2-02-packing-start"
+                            },
+                            new()
+                            {
+                                Permission = "3-01-printing-label"
+                            },
+                            new()
+                            {
+                                Permission = "2-01-packing-info"
+                            }
+                        }
                     }
                 },
                 new()
@@ -135,12 +177,21 @@ public static class Data
                     {
                         RoleId = 3,
                         RoleName = "document operation",
-                        Permissions =
-                        [
-                            "3-01-printing-label",
-                            "2-04-packing-report",
-                            "1-04-picking-report"
-                        ]
+                        Permissions =new List<PermissionModel>
+                        {
+                            new()
+                            {
+                                Permission = "3-01-printing-label"
+                            },
+                            new()
+                            {
+                                Permission = "2-04-packing-report"
+                            },
+                            new()
+                            {
+                                Permission = "1-04-picking-report"
+                            }
+                        }
                     }
                 }
             }

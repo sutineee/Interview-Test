@@ -13,6 +13,7 @@ public class InterviewTestDbContext : DbContext
     public DbSet<UserModel> UserTb { get; set; }
     public DbSet<RoleModel> RoleTb { get; set; }
     public DbSet<UserRoleMappingModel> UserRoleMappingTb { get; set; }
+    public DbSet<PermissionModel> PermissionTb { get; set; }
 }
 
 public class InterviewTestDbContextDesignFactory : IDesignTimeDbContextFactory<InterviewTestDbContext>

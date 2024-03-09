@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Interview_Test.Models;
 
+[Table("UserTb")]
 public class UserModel
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
