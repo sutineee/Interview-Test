@@ -104,3 +104,6 @@ public ActionResult GetUserById(UserModel user)
     return Ok();
 }
 ```
+
+- Implement gateway configuration in `configurationOcelot.json` file by using library `Ocelot` 
+to  forward the client request to `Interview-Test.Api(https://localhost:44307)` with using the domain `https://localhost:44375/gateway`
