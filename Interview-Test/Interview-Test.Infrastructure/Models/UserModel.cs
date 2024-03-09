@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace Interview_Test.Models;
 
@@ -15,6 +16,7 @@ public class UserModel
     [Column(TypeName = "varchar(100)")]
     public string Username { get; set; }
     [Required]
+    [DeleteBehavior(DeleteBehavior.Cascade)]
     public UserProfileModel UserProfile { get; set; }
     [Required]
     public ICollection<UserRoleMappingModel> UserRoleMappings { get; set; }
