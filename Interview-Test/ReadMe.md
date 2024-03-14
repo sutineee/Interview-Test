@@ -1,15 +1,14 @@
 # Question
-- Implement method `InvokeAsync` in [AuthenMiddleware.cs](#question) file to validate the `decrypted x-api-key` 
-from request header. So your must be decrypted the `x-api-key` from request header before you compare to the `original x-api-key` 
+- Implement method `InvokeAsync` in [AuthenMiddleware.cs](#question) file to validate the `x-api-key` 
+from request header. So your must be hashed the `x-api-key` by using SHA512 algorithm before you compare to the `hashedKey` in [AuthenMiddleware.cs](#question) file as below:
+```csharp
+private const string xApiKey = "<your hashed sha512 x-api-key>";
+```
 and return `401 Unauthorized` if the `x-api-key` is invalid.
-
-**Important Note:** Please use `SHA512` algorithm to decrypt the `x-api-key` from request header.
 
 - Implement design database schema by using `Code-First and automated migration` approach in [InterviewTestDbContext.cs](#question) file to your database for the following requirement:
   - User can have multiple roles.
   - Role can have multiple permissions.
-  - User can have multiple permissions.
-  - User can have multiple roles and permissions.
 
 **Important Note:** Please use `SQL Server` for your database schema design.
 

@@ -2,7 +2,7 @@
 
 public class AuthenMiddleware : IMiddleware
 {
-    private const string xApiKey = "<your x-api-key>";
+    private const string hashedKey = "<your hash sha512 x-api-key>";
     public Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
         var apiKeyHeader = context.Request.Headers["x-api-key"];
