@@ -1,4 +1,6 @@
-﻿namespace Interview_Test.Middlewares;
+﻿using System.Security.Cryptography;
+
+namespace Interview_Test.Middlewares;
 
 public class AuthenMiddleware : IMiddleware
 {
@@ -27,7 +29,7 @@ public class AuthenMiddleware : IMiddleware
      {
          using (var sha512 = SHA512.Create())
          {
-             byte[] bytes = Encoding.UTF8.GetBytes(input);
+             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(input);
              byte[] hashBytes = sha512.ComputeHash(bytes);
              return Convert.ToBase64String(hashBytes);
          }
